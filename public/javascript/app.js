@@ -17,3 +17,19 @@ function copyLink() {
     document.execCommand("Copy");
 }
 
+function navbar() {
+    const hamburger = document.querySelectorAll('#hamburger');
+    const dropdown = document.getElementById('dropdown');
+    for (let i = 0; i < hamburger.length; i++) {
+        hamburger[i].addEventListener('click', () => {
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden')
+            }
+            else {
+                dropdown.classList.add('hidden');
+            }
+        })
+    }
+}
+
+navbar();
